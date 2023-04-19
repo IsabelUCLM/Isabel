@@ -1,0 +1,31 @@
+=== Ruta de scrapy ===
+C:\Users\usuario\nombre_proyecto
+
+=== Comandos básicos ===
+1. Obtener todos los comandos.
+>> scrapy 
+2. Abre spider y mira información de las páginas scrapeadas.
+>> scrapy bench
+3. Obtener marcado HTML
+>> scrapy fetch http://paginaweb.com
+4. Crea spiders
+>> genspider
+5. Testear código (scrapy shell)
+>> shell
+
+== Guía  proyecto ==
+1. scrapy startproject nombre_proyecto
+2. cd nombre_proyecto
+3. scrapy shell "http://paginaweb.com"
+4. response.xpath('//h1/text').getall()
+5. Ir a mi dane.py para ver lo añadido
+6. scrapy crawl nombre_proyecto -o nombre_nuevo_archivo_copia.csv
+Se ha añadido un archivo con datos extraidos a otro.
+
+=== Anotaciones ===
+CRAWLING - No extrae, solo busca información
+RESPONSE - Buscar elementos 
+    ...response.xpath('//tag[@Atributo="Valor"]')
+    ...response.xpath().getall() Devuelve 1 elemento
+    ...response.xpath().getall() Lista de elementos
+YIELD Devuelve valores (parecido a return)
